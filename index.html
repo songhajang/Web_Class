@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹사이트</title>
+  <link rel="stylesheet" href="./style.css">
+  <style></style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-bg"></div>
+    <div class="logo">
+      <img src="https://mediaboom.com/wp-content/uploads/2016/09/logo-new.png" alt="logo">
+    </div>
+    <div class="menu">
+      <ul>
+        <li class="m"><a href="#">Work</a></li>
+        <li class="m"><a href="#">Industries</a></li>
+        <li class="m"><a href="#">Our Agency</a></li>
+        <li class="m"><a href="#">Services</a></li>
+        <li class="m"><a href="#">Resources</a></li>
+        <li class="m"><a href="#">Insights</a></li>
+        <li class="c"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header>
+    <video src="https://mbluxury1.s3.amazonaws.com/2020/09/18141509/home-video-2020.mp4" autoplay loop muted controls></video>
+    <div id="headline">
+      <h1>A Digital Marketing Agency</h1>
+      <h2>With Proven Results</h2>
+      <p> From boosting online traffic and brand awareness, to generating qualified leads and increasing sales, our
+        online marketing company will help your business grow with successful marketing, advertising, design, and
+        website services.</p>
+      <a href="#"> Schedule Your Free Consultation</a>
+    </div>
+  </header>
+  <div id="content">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iure ipsam minima non vel quidem ducimus nemo
+    praesentium ipsum consequuntur alias suscipit amet molestiae, est rerum. Ullam, molestiae reiciendis impedit!
+  </div>
+  <!--
+	로고 소스(흰색 글자) : https://mediaboom.com/wp-content/uploads/2016/09/logo-new.png
+	로고 소스(검정색 글자) : https://mediaboom.com/wp-content/uploads/2016/11/logo-dark.png
+	비디오 소스 : https://mbluxury1.s3.amazonaws.com/2020/09/18141509/home-video-2020.mp4
+	메뉴 : Work Industries Our Agency Services Resources Insights Contact
+	헤드라인 : A Digital Marketing Agency
+	서브헤드라인 : With Proven Results
+	설명글 : From boosting online traffic and brand awareness, to generating qualified leads and increasing sales, our online marketing company will help your business grow with successful marketing, advertising, design, and website services.
+	링크버튼 텍스트 : Schedule Your Free Consultation
+	임시텍스트 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iure ipsam minima non vel quidem ducimus nemo praesentium ipsum consequuntur alias suscipit amet molestiae, est rerum. Ullam, molestiae reiciendis impedit!
+	-->
+	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		//window(브라우저 창)에 스크롤이라는 사건(event)이 벌어지면...
+		$(window).scroll(function(){
+			let st = $(window).scrollTop();
+			if( st > 0 ) {
+				$(".nav-bg").css({height: "100px"});
+				$("li.m a").css({color: "black"});
+				let logo = "https://mediaboom.com/wp-content/uploads/2016/11/logo-dark.png";
+				$(".logo img").attr("src", logo);
+			} else {
+				$(".nav-bg").css({height: "0"});
+				$("li.m a").css({color: "white"});
+        let logo = "https://mediaboom.com/wp-content/uploads/2016/09/logo-new.png";
+				$(".logo img").attr("src", logo);
+			}
+		});
+	</script>
+</body>
+
+</html>
